@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Socio Tech</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="forget_pasword">Forget Password?</string>
+    <string name="error_fields">*Please fill all fields</string>
+    <string name="service_request">Service Request</string>
+    <string name="subject">Subject</string>
+    <string name="description">Description</string>
+    <string name="select_item">Select Priority</string>
+    <string name="navigation_drawer_open">Nav Close</string>
+    <string name="navigation_drawer_close">Nav close\n</string>
+    <string name="invoices">Invoice</string>
+    <string name="meet_visitor">Meet Visitor</string>
+    <string name="my_parking">My Parking</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="guideline">Guidelines</string>
+    <string name="help_and_support"><![CDATA[Help & Support]]></string>
+    <string name="add_visitor">+ Add visitor</string>
+    <string name="upcomingVisitors">Upcoming Visitors</string>
+    <string name="no_visitors">No Visitors coming!</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="purpose">Purpose</string>
+    <string name="date">Date</string>
+    <string name="duration">Duration</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="flat_details">Flat Address</string>
+    <string name="add_parking_request">+ Add Parking Request</string>
+    <string name="allocated_parking">Allocated Parking</string>
+    <string name="no_parking">No Allocated Parking  yet you need to  add parking request</string>
+    <string name="flat">Flat</string>
+    <string name="block">Block</string>
+    <string name="Logout">Logout</string>
+    <string name="available_slots">Select Available Slots</string>
+    <string name="mobile">Mobile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="announcement">ANNOUNCEMENT</string>
+    <string name="thanks">Thanks</string>
+    <string name="my_invoices">My Invoices</string>
+    <string name="pay">Pay Now</string>
+    <string name="add_service_request">+Add Service Request</string>
+    <string name="whatsapp">Whatsapp</string>
+
+
+</resources>
