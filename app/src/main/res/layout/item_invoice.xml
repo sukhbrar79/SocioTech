@@ -52,6 +52,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginEnd="8dp"
                             android:text="joe"
+                            android:textStyle="bold"
                             android:layout_weight="0.5"
                             android:layout_gravity="end"/>
                     </LinearLayout>

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sociotech.R;
 import com.example.sociotech.activity.PaymentActivity;
+import com.example.sociotech.activity.WebviewActivity;
 import com.example.sociotech.model.invoices.Datum;
 
 import java.util.List;
@@ -36,15 +37,27 @@ public class InvoicesAdapter extends RecyclerView.Adapter<InvoicesAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.invoice_number.setText("#"+dataList.get(position).getInvoiceNumber());
-        holder.status.setText(dataList.get(position).getStatus());
-        holder.amount.setText("₹ "+dataList.get(position).getAmount().toString());
+        holder.invoice_number.setText("#" + dataList.get(position).getInvoiceNumber());
+
+        holder.amount.setText("₹ " + dataList.get(position).getAmount().toString());
         holder.due_date.setText(dataList.get(position).getDueDate());
+        holder.status.setText(dataList.get(position).getStatus());
+
+        if(dataList.get(position).getStatus().equals("Paid"))
+        {
+            holder.status.setTextColor(context.getResources().getColor(R.color.green));
+        }
+
+        if(dataList.get(position).getStatus().equals("Overdue"))
+        {
+            holder.status.setTextColor(context.getResources().getColor(R.color.red));
+        }
+
 
         holder.payButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, PaymentActivity.class));
+                context.startActivity(new Intent(context, WebviewActivity.class).putExtra("url", dataList.get(position).getPaymentLink()));
             }
         });
 
@@ -56,7 +69,7 @@ public class InvoicesAdapter extends RecyclerView.Adapter<InvoicesAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView invoice_number, status, amount,due_date;
+        TextView invoice_number, status, amount, due_date;
         Button payButton;
 
         public ViewHolder(@NonNull View itemView) {
@@ -65,7 +78,7 @@ public class InvoicesAdapter extends RecyclerView.Adapter<InvoicesAdapter.ViewHo
             status = itemView.findViewById(R.id.status);
             amount = itemView.findViewById(R.id.amount);
             due_date = itemView.findViewById(R.id.due_date);
-            payButton=itemView.findViewById(R.id.payButton);
+            payButton = itemView.findViewById(R.id.payButton);
 
         }
     }

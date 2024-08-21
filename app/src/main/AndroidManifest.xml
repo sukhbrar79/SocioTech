@@ -73,6 +73,10 @@
             android:name="com.example.sociotech.activity.PaymentActivity"
             android:exported="false" />
 
+        <activity
+            android:name="com.example.sociotech.activity.WebviewActivity"
+            android:exported="false" />
+
 
         <provider
             android:name="androidx.core.content.FileProvider"

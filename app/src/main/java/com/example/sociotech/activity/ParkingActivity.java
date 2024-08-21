@@ -95,13 +95,6 @@ public class ParkingActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 hit_submitParkingRequestAPI();
-               /* if (!fllat_id.equals("") && !block_id.equals("") && !allocation_date.equals("") && !expiration_date.equals(""))
-                {
-
-                }
-                else {
-                    Toast.makeText(ParkingActivity.this, "Please select all fields", Toast.LENGTH_SHORT).show();
-                }*/
 
             }
         });
@@ -251,7 +244,7 @@ public class ParkingActivity extends AppCompatActivity {
 
     private void setSpinner(List<FlatDatum> data) {
         List<String> items = new ArrayList<>();
-        items.add("Select Flat");
+       // items.add("Select Flat");
         for (int i = 0; i < data.size(); i++) {
             items.add(data.get(i).getName());
         }
@@ -267,8 +260,6 @@ public class ParkingActivity extends AppCompatActivity {
 
                 if (!parent.getItemAtPosition(position).toString().equals("Select Flat"))
                 {
-                   /* FlatDatum flatDatum= (FlatDatum) parent.getSelectedItem();
-                    fllat_id = String.valueOf(flatDatum.getId());*/
                     for (int i = 0; i < items.size(); i++) {
                         if (parent.getItemAtPosition(position).toString().equals(items.get(i))) {
                             fllat_id= String.valueOf(data.get(i).getId());
@@ -289,7 +280,7 @@ public class ParkingActivity extends AppCompatActivity {
 
     private void setSpinnerBlocks(List<BlocksDatum> data) {
         List<String> items = new ArrayList<>();
-        items.add("Select Block");
+       // items.add("Select Block");
 
         for (int i = 0; i < data.size(); i++) {
             items.add(data.get(i).getName());
@@ -323,7 +314,7 @@ public class ParkingActivity extends AppCompatActivity {
 
     private void setSpinnerAvailableSlots(List<AvailableSlots> data) {
         List<String> items = new ArrayList<>();
-        items.add("Select Slot");
+       // items.add("Select Slot");
 
         for (int i = 0; i < data.size(); i++) {
             items.add(data.get(i).getSpotNumber());
